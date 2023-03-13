@@ -1,2 +1,4 @@
-# PythonScriptEtrap
-Scripts em Python para capturar imagens, renomear, cropar e fazer upload no Google Drive de um Módulo Raspberry
+# etrap_python_capture_crop_drive
+projeto e-trap: script em python para captura, retorne e transmissao para o drive.
+
+## Colocar aqui todo o processo para o funcionamento do Script (instalação de pacotes, bibliotecas, configurações e afins)
