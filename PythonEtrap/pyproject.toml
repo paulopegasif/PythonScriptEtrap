@@ -2,7 +2,7 @@
 name = "python_etrap_pkg"
 version = "0.0.1"
 authors = [
-  { name="", email="" },
+  { name="IFSul, Campus Passo Fundo", email="telmojunior@ifsul.edu.br" },
 ]
 description = "Programa de automação simples para IAs e redes neurais voltado para o uso de modulos de cameras e cropagem de fotos"
 readme = "README.md"
