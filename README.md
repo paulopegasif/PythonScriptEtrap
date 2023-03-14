@@ -16,7 +16,16 @@
 
 #### Python 3.9 ou superior
 
+
+
+
 #### OpenCV
+
+
+
+
+
+#### Conda
   
   
   
