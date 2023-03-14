@@ -4,8 +4,17 @@
 
 ## Pré-Requisitos
 (Colocar tudo o que necessita para o funcionamento do Script)
+
+  - Instalcao do Conda
+  - Cria ambiente Virtual Conda com o Python 3.9
+  - Incremento do SWAP e memoria da GPU
+  - Instalacao do OpenCV
+
+
+
+
 - Python 3
-- OpenCV
+- OpenCV 4.5.5
 - Conda
 
 
