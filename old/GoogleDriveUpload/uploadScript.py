@@ -23,8 +23,8 @@ drive = GoogleDrive(gauth)
 
 
 
-folder_cropped = '1V_2FZw5X9T828xQedEOvb5l9lsr6Zoac'
-folder = '1Lzn6tLnREkbgqlCT3tHNDqCrPoUyYZqN'
+folder_cropped = ''
+folder = ''
 
 # Upload files
 

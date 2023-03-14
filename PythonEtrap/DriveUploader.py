@@ -6,8 +6,8 @@ from pydrive.drive import GoogleDrive # Pydrive library (pip install pydrive)
 
 class DriveUploader:
     folders = {
-        'cropped': '1V_2FZw5X9T828xQedEOvb5l9lsr6Zoac',
-        'original': '1Lzn6tLnREkbgqlCT3tHNDqCrPoUyYZqN'
+        'cropped': '[FOLDER_ID]',
+        'original': '[FOLDER_ID]'
     }
 
     def __init__(self, gauth):
