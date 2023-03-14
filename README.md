@@ -15,7 +15,11 @@
 (Colocar aqui todo o processo de instalação dos componentes necessários para o funcionamento do Script no Raspberry)
 
 #### Python 3.9 ou superior
+Para realizar a instalação, digitar no terminal:
 
+<code> $ sudo apt-get install python3 </code> 
+
+<code> $ sudo apt-get install python3-pip </code> 
 
 
 
