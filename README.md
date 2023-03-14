@@ -4,17 +4,27 @@
 
 ## Pré-Requisitos
 (Colocar tudo o que necessita para o funcionamento do Script)
+- Python 3
+- OpenCV
+- Conda
+
+
+
 
 ## Instalando Dependências
 (Colocar aqui todo o processo de instalação dos componentes necessários para o funcionamento do Script no Raspberry)
 
 #### Python 3.9 ou superior
 <code> sudo apt-get update<code>
+
 <code> sudo apt-get upgrade<code>
+  
 <code> sudo apt-get python3<code>
 
-#### 
-
+#### OpenCV
+  
+  
+  
 
 
 
@@ -25,6 +35,9 @@
 4. Seta o nome correto para o arquivo (Data Atual + Id da Placa + Tipo do inseto + Id da Imagem(contador) + .jpg)
 5. Chama a função para fazer o Crop 
 6. Realiza o upload dos arquivos em pastas no GoogleDrive
+  
+# Funcionamento
+  
 
 
 
