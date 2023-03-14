@@ -11,7 +11,7 @@
   - Instalacao do OpenCV
 
 
-
+-------------------------------------------
 
 - Python 3
 - OpenCV 4.5.5
