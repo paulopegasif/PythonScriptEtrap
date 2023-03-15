@@ -4,8 +4,7 @@
 # updated: 2023-03-15
 
 usage() {
-    echo "Usage: $(basename $0) [ -p | --package ] 
-                                [ -d | --define VARIABLE ]
+    echo "Usage: $(basename $0) [ -p | --package ]
                                 [ -r | --run CONFIG_MODULE ]
                                 [ -l | --list ]
                                 [ -h | --help ] [ -v | --verbose ]"
@@ -15,7 +14,6 @@ usage() {
 help_panel() {
     echo "Help Panel:
             -p/--package        => Constroi o pacote do PythonEtrap
-            -d/--define [VAR]   => Definição de variáveis específicas (yaml)
             -r/--run [MOD]      => Roda o módulo de configuração especificado
             -h/--help           => Mostra esse painel de ajuda
             -v/--verbose        => Modo verbose"
@@ -23,21 +21,28 @@ help_panel() {
 }
 
 BASEDIR=$(dirname $0)
+CONFIG_MODULES=(
+    anaconda
+)
 
 PACKAGE=unset
 DEFINE=unset
 SET=unset
 VERBOSE=unset
 
-define_var() {
-
-}
-
 make_etrap_pkg() {
     python3 -m pip install --upgrade build
     cd $BASEDIR/PythonEtrap
     python3 -m build
     ls -l ./dist/
+}
+
+modules_dump() {
+    echo "[Config Modules] => {"
+    for mod in CONFIG_MODULES; do
+        echo -e "\t$mod"
+    done
+    echo "}"
 }
 
 run_config_module() {
@@ -58,7 +63,7 @@ install_anaconda() {
 #-------------------------------#
 # Parsing Commandline arguments #
 #-------------------------------#
-PARSED_ARGS=$(getopt -a -n configure -o plvh:r:d: --long package,list,verbose,help:,run:,define -- "$@")
+PARSED_ARGS=$(getopt -a -n configure -o plvh:r: --long package,list,verbose,help:,run: -- "$@")
 VALID_ARGS=$?
 
 if [ "$VALID_ARGS" != "0" ]; then
@@ -73,20 +78,20 @@ do
             make_etrap_pkg
             break
             ;;
-        -d | --define)  
-            define_var $2
-            shift 2
-            ;;
         -r | --run)
             run_config_module $2
             shift 2
             ;;
         -l | --list)
-            module_list_dump
+            modules_dump
             break
             ;;
         -h | --help)
             help_panel
+            ;;
+        -v | --verbose)
+            VERBOSE=1
+            shift
             ;;
         --)
             shift
