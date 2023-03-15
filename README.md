@@ -110,9 +110,9 @@ Dando fim às checagens necessárias, o script da instalação é simples. Prime
 <code> $ free -m </code>
 
 Para verificar a quantidade de memória disponível, basta somar a memória total com a memória swap. O resultado deve ser de no mínimo 6.5 GB. Se a memória for 
-menor do que a necessária, deve-se expandi-la: 
+menor do que a necessária, deve-se expandi-la. Pode ser encontrada maneira de se expandir a memória swap por meio do seguinte link:
 
-// Verificar como expandir a memória !!!
+https://qengineering.eu/install-opencv-4.5-on-raspberry-64-os.html
 
 <code> $ wget https://github.com/Qengineering/Install-OpenCV-Raspberry-Pi-64-bits/raw/main/OpenCV-4-5-5.sh </code>
 
