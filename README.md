@@ -6,7 +6,7 @@
 (Colocar tudo o que necessita para o funcionamento do Script)
 
   - Instalação do Anaconda
-  - Criação de ambiente virtual Anaconda com o Python 3.9
+  - Criação de ambiente virtual Conda com o Python 3.9
   - Incremento do SWAP e memória da GPU
   - Instalação do OpenCV
 
@@ -15,7 +15,7 @@
 
 - Python 3
 - OpenCV 4.5.5
-- Anaconda
+- MambaForge
 
 
 
@@ -31,7 +31,7 @@
 
 ---
 
-### Anaconda
+### MambaForge
 
 Primeiramente deve fazer o download no site do Anaconda.
 https://www.anaconda.com/products/distribution#download-section
