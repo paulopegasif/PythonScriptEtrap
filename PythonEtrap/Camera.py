@@ -23,10 +23,12 @@ class Camera:
         self.picam_config['controls']['NoiseReductionMode'] = 1
         
     def configure(self):
+        ''' Define Picamera2 configuration & User defined settings '''
         print("[*] Starting Picamera2 configuration method")
         self.picam.configure(self.picam_config)
         
     def startPlateCapture(self, trapNum):
+        ''' PiCamera2 frame capture loop with Opencv2 image interface '''
         self.trapNum = trapNum
 
         # Start picamera

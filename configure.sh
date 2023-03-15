@@ -15,6 +15,7 @@ help_panel() {
     echo "Help Panel:
             -p/--package        => Constroi o pacote do PythonEtrap
             -r/--run [MOD]      => Roda o módulo de configuração especificado
+            -l/--list           => Lista todos os módulos de configuração
             -h/--help           => Mostra esse painel de ajuda
             -v/--verbose        => Modo verbose"
     exit 0
