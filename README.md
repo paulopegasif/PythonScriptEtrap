@@ -90,6 +90,7 @@ Nesse caso, o terminal exibirá se está na versão mais recente, ou não. Caso 
 aparecer "BOOTLOADER: update required", necessita de atualização, a qual pode ser executada por meio do comando:
 
 <code> $ sudo rpi-eeprom-update-a </code>
+
 <code> $ sudo reboot </code>
 
 #### Memória GPU (Unidade de Processamento Gráfico)
@@ -108,7 +109,9 @@ menor do que a necessária, deve-se expandi-la:
 // Verificar como expandir a memória !!!
 
 <code> $ wget https://github.com/Qengineering/Install-OpenCV-Raspberry-Pi-64-bits/raw/main/OpenCV-4-5-5.sh </code>
+
 <code> $ sudo chmod 755 ./OpenCV-4-5-5.sh </code>
+
 <code> $ ./OpenCV-4-5-5.sh </code>
 
 #### Finalização e limpeza
