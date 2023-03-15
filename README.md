@@ -45,11 +45,11 @@ Feito isso, verifique se você tem permissão para executar o arquivo instalador
 
 Após concluir o download, abra o terminal e ache o arquivo baixado utilizando o comando: 
 
-<code> cd ~/Downloads </code>
+<code> $ cd ~/Downloads </code>
 
 Execute o arquivo: 
 
-<code> bash Mambaforge-Linux-aarch64.sh </code>
+<code> $ bash Mambaforge-Linux-aarch64.sh </code>
 
 Concluindo assim o processo de instalação.
 
@@ -57,11 +57,11 @@ Feito isso feche e abra o terminal novamente, mas agora ele será inicializado c
 
 Para criar o ambiente virtual com a versão necessária do python para a utilização da câmera, utilizar os seguintes comandos:
 
-<code>conda create --name venv_script_etrap_python3.10 python=3.10</code>
+<code> $ conda create --name venv_script_etrap_python3.10 python=3.10</code>
 
-<code>conda activate venv_script_etrap_python3.10</code>
+<code> $ conda activate venv_script_etrap_python3.10</code>
 
-<code>pip install picamera</code>
+<code> $ pip install picamera</code>
 
 
 ---
