@@ -22,14 +22,16 @@
 ## Instalando Dependências
 (Colocar aqui todo o processo de instalação dos componentes necessários para o funcionamento do Script no Raspberry)
 
-#### Python 3.9 ou superior
+### Python 3.9 ou superior
   Para realizar a instalação do Python no Raspberry, deve-se digitar no terminal:
 
 <code> $ sudo apt-get install python3 </code> 
 
 <code> $ sudo apt-get install python3-pip </code> 
 
-#### Anaconda
+---
+
+### Anaconda
 
 Primeiramente deve fazer o download no site do Anaconda.
 https://www.anaconda.com/products/distribution#download-section
@@ -56,9 +58,9 @@ Para iniciar o Anaconda Navigator, use o seguinte comando no terminal:
 <code> anaconda-navigator </code>
 
 
+---
 
-
-#### OpenCV
+### OpenCV
   
 
 
@@ -67,7 +69,7 @@ Para iniciar o Anaconda Navigator, use o seguinte comando no terminal:
   
   
 
-
+---
 
 ## Fluxo do Script
 1. Pergunta ao usuário qual o ID da placa;
@@ -77,6 +79,8 @@ Para iniciar o Anaconda Navigator, use o seguinte comando no terminal:
 5. Chama a função para fazer o Crop 
 6. Realiza o upload dos arquivos em pastas no GoogleDrive
   
+  
+---
 # Funcionamento
   
 
