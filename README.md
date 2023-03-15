@@ -62,7 +62,7 @@ Para iniciar o Anaconda Navigator, use o seguinte comando no terminal:
 
 ### OpenCV
   
-## Checagem da versão do Sistema Operacional
+#### Checagem da versão do Sistema Operacional
 Antes da instalação do OpenCV no Raspberry pi 4, há alguns passos a serem seguidos. Primeiramente, deve-se checar a versão do Raspberry, inserindo o seguinte
 comando no terminal:
 
@@ -75,11 +75,11 @@ Após fazer isso, deve-se verificar a versão do compilador de C++, por meio do 
 Em ambas as verificações deve ser encontrado o "aarch64-linux-gnu version". Caso isso não ocorra, e o usuário possua um sistema operacional de 64 bits, deve-se 
 reinstalar todo o SO, em sua versão mais recente.
 
-## Checagem da memória swap
+#### Checagem da memória swap
 Em seguida, deve ser checado o tamanho da memória swap, também conhecida como virtual ou ainda área de troca. Essa deve ser grande o suficiente para suportar o que
 for necessitado.
 
-## Checagem da EEPROM (memória volátil para armazenamento de pequenas quantidades de dados)
+#### Checagem da EEPROM (memória volátil para armazenamento de pequenas quantidades de dados)
 A última checagem necessária para a configuração do Raspberry pi 4 é da versão do software da EEPROM. Nesse caso, isso não tem relação com o OpenCV, mas com a
 dissipação do calor. Para esse ganho de performance e dissipação correta do calor, portanto, necessita-se verificar o estado da EEPROM, se necessita ser
 atualizada, ou não:
@@ -92,12 +92,12 @@ aparecer "BOOTLOADER: update required", necessita de atualização, a qual pode 
 <code> $ sudo rpi-eeprom-update-a  # somente inserir -a no final do código da verificação da versão da EEPROM </code> 
 <code> $ sudo reboot </code> # reiniciar a fim de confirmar a atualização
 
-## Memória GPU (Unidade de Processamento Gráfico)
+#### Memória GPU (Unidade de Processamento Gráfico)
 Como o chip de memória RAM é utilizado tanto pela CPU quando pela GPU, deve-se checar e modificar a quantidade da memória GPU para pelo menos 128 MB.
 Para acessar e modificá-la, vá no canto superior esquerdo da tela, na "raspberry", selecione "Preferences", e então Raspberry Pi Configuration. Por fim,
 vá na seção de "Performance" e modifique a memória GPU para no mínimo 128 MB. 
 
-## Script de Instalação
+#### Script de Instalação
 Dando fim às checagens necessárias, o script da instalação é simples. Primeiramente, cheque a memória disponível: são necessários no mínimo um total de 6.5 GB.
 
 <code> $ free -m </code>
@@ -111,7 +111,7 @@ menor do que a necessária, deve-se expandi-la:
 <code> $ sudo chmod 755 ./OpenCV-4-5-5.sh </code>
 <code> $ ./OpenCV-4-5-5.sh </code>
 
-## Finalização e limpeza
+#### Finalização e limpeza
 Após a instalação completa do OpenCV, pode ser necessária a limpeza do dphys-swap. Ela deve ser feita por meio do terminal do Raspberry Pi 4 da seguinte maneira:
 <code> $ sudo dphys-swapfile swapoff </code>
 <code> $ sudo dphys-swapfile uninstall </code>
