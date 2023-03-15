@@ -116,7 +116,9 @@ menor do que a necessária, deve-se expandi-la:
 
 #### Finalização e limpeza
 Após a instalação completa do OpenCV, pode ser necessária a limpeza do dphys-swap. Ela deve ser feita por meio do terminal do Raspberry Pi 4 da seguinte maneira:
+
 <code> $ sudo dphys-swapfile swapoff </code>
+
 <code> $ sudo dphys-swapfile uninstall </code>
 
 Para verificar se tudo ocorreu como o esperado, digite o seguinte comando no terminal:
