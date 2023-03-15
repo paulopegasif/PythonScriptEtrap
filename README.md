@@ -5,7 +5,7 @@
 ## Pré-Requisitos
 (Colocar tudo o que necessita para o funcionamento do Script)
 
-  - Instalação do Anaconda
+  - Instalação do Mambaforge
   - Criação de ambiente virtual Conda com o Python 3.9
   - Incremento do SWAP e memória da GPU
   - Instalação do OpenCV
@@ -33,14 +33,15 @@
 
 ### MambaForge
 
-Primeiramente deve fazer o download no site do Anaconda.
-https://www.anaconda.com/products/distribution#download-section
+Primeiramente deve fazer o download do Mambaforge.
+https://github.com/conda-forge/miniforge#mambaforge
 
-Exemplo: “64-Bit (AWS Graviton2 / ARM64) Installer (534 MB)”
+Exemplo: "Linux - aarch64 (arm64)"
+(Versão
 
 Feito isso, verifique se você tem permissão para executar o arquivo instalador, com o comando:
 
-<code> chmod +x ~/Downloads/Anaconda3-xxxxx-Linux-armhf.sh </code>
+<code> chmod +x ~/Downloads/Mambaforge-Linux-aarch64 </code>
 
 Após concluir o download, abra o terminal e ache o arquivo baixado utilizando o comando: 
 
@@ -48,14 +49,17 @@ Após concluir o download, abra o terminal e ache o arquivo baixado utilizando o
 
 Execute o arquivo: 
 
-<code> ./Anaconda3-xxxxx-Linux-armhf.sh </code>
+<code> bash Mambaforge-Linux-aarch64.sh </code>
 
-substituindo os “x” pela versão que foi baixada;
+Concluindo assim o processo de instalação.
 
-Depois de concluir a instalação, feche e abra o terminal novamente para que as alterações tenham efeito.
+Feito isso feche e abra o terminal novamente, mas agora ele será inicializado como "[base] pi@raspberrypi: "......"".
 
-Para iniciar o Anaconda Navigator, use o seguinte comando no terminal: 
-<code> anaconda-navigator </code>
+Para criar o ambiente virtual com a versão necessária do python para a utilização da câmera, utilizar os seguintes comandos:
+
+<code>conda create --name venv_script_etrap_python3.10 python=3.10</code>
+<code>conda activate venv_script_etrap_python3.10</code>
+<code>pip install picamera</code>
 
 
 ---
@@ -147,14 +151,7 @@ Assim sendo, após ter seguido os passos supracitados corretamente, o OpenCV ter
 ---
 # Funcionamento
   
-Após a instalação do mamba forge: 
-irá aparecer no terminal [base] pi@raspberrypi: "......"
-Criar ambiente virtual com a versão necessária do python para a utilização da câmera
 
-
-<code>conda create --name venv_script_etrap_python3.10 python=3.10</code>
-<code>conda activate venv_script_etrap_python3.10</code>
-<code>pip install picamera</code>
 
 
 
