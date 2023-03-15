@@ -22,24 +22,36 @@ help_panel() {
     exit 0
 }
 
+BASEDIR=$(dirname $0)
+
 PACKAGE=unset
 DEFINE=unset
 SET=unset
 VERBOSE=unset
-
-module_list_dump() {
-
-}
-
-run_config_module() {
-
-}
 
 define_var() {
 
 }
 
 make_etrap_pkg() {
+    python3 -m pip install --upgrade build
+    cd $BASEDIR/PythonEtrap
+    python3 -m build
+    ls -l ./dist/
+}
+
+run_config_module() {
+    case "$1" in
+        anaconda | conda)
+            install_anaconda
+            break;;
+    esac
+}
+
+#---------------------------------#
+# Configuration modules functions #
+#---------------------------------#
+install_anaconda() {
 
 }
 
