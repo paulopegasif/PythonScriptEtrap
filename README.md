@@ -147,6 +147,14 @@ Assim sendo, após ter seguido os passos supracitados corretamente, o OpenCV ter
 ---
 # Funcionamento
   
+Após a instalação do mamba forge: 
+irá aparecer no terminal [base] pi@raspberrypi: "......"
+Criar ambiente virtual com a versão necessária do python para a utilização da câmera
+
+
+<code>conda create --name venv_script_etrap_python3.10 python=3.10</code>
+<code>conda activate venv_script_etrap_python3.10</code>
+<code>pip install picamera</code>
 
 
 
