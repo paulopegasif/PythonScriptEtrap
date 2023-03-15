@@ -89,8 +89,8 @@ atualizada, ou não:
 Nesse caso, o terminal exibirá se está na versão mais recente, ou não. Caso apareça a mensagem "BOOTLOADER: up-to-date", está correta a versão. Contudo, se 
 aparecer "BOOTLOADER: update required", necessita de atualização, a qual pode ser executada por meio do comando:
 
-<code> $ sudo rpi-eeprom-update-a  # somente inserir -a no final do código da verificação da versão da EEPROM </code> 
-<code> $ sudo reboot </code> # reiniciar a fim de confirmar a atualização
+<code> $ sudo rpi-eeprom-update-a </code>
+<code> $ sudo reboot </code>
 
 #### Memória GPU (Unidade de Processamento Gráfico)
 Como o chip de memória RAM é utilizado tanto pela CPU quando pela GPU, deve-se checar e modificar a quantidade da memória GPU para pelo menos 128 MB.
