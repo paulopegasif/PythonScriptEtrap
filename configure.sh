@@ -21,6 +21,9 @@ help_panel() {
     exit 0
 }
 
+MAMBA_FORGE_INS="https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
+OPENCV_INS="https://github.com/Qengineering/Install-OpenCV-Raspberry-Pi-64-bits/raw/main/OpenCV-4-5-5.sh"
+
 BASEDIR=$(dirname $0)
 SYSTEM_ARCH=$(uname -m)
 
@@ -46,7 +49,7 @@ make_etrap_pkg() {
 # Realiza a listagem de todos os módulos de configuração do script
 modules_dump() {
     echo "[Config Modules] => {"
-    for mod in CONFIG_MODULES; do
+    for mod in $CONFIG_MODULES; do
         echo -e "\t$mod"
     done
     echo "}"
@@ -74,7 +77,7 @@ run_config_module() {
 
 # Realiza o download e a execução do script de instalação do mambaforge
 install_mamba() {
-    wget "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
+    wget "$MAMBA_FORGE_INS"
     bash Mambaforge-$(uname)-$(uname -m).sh
 }
 
@@ -91,7 +94,7 @@ install_opencv() {
     local tram=$(grep MemTotal /proc/meminfo | awk '{print $2}')
     tram=$(expr $tram / 1024 / 1024)
     if [ $tram > 6.5 ];then
-        wget -O - https://github.com/Qengineering/Install-OpenCV-Raspberry-Pi-64-bits/raw/main/OpenCV-4-5-5.sh | bash
+        wget -O - $OPENCV_INS | bash
         sudo dphys-swapfile swapoff
         sudo dphys-swapfile uninstall
     fi
