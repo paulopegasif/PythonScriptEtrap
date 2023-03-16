@@ -21,9 +21,11 @@ help_panel() {
     exit 0
 }
 
+# Script de instalação -- links
 MAMBA_FORGE_INS="https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
 OPENCV_INS="https://github.com/Qengineering/Install-OpenCV-Raspberry-Pi-64-bits/raw/main/OpenCV-4-5-5.sh"
 
+# Globais de sistema
 BASEDIR=$(dirname $0)
 SYSTEM_ARCH=$(uname -m)
 
@@ -33,6 +35,7 @@ CONFIG_MODULES=(
     opencv
 )
 
+# Variáveis de argumentos
 PACKAGE=unset
 DEFINE=unset
 SET=unset
