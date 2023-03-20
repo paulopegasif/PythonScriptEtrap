@@ -118,14 +118,6 @@ vá na seção de "Performance" e modifique a memória GPU para no mínimo 128 M
 
 #### Script de Instalação
 
-pip install opencv-python
-sudo apt install opencv-data
-sudo apt install libcap-dev
-pip install picamera2
-
-
-
-
 Dando fim às checagens necessárias, o script da instalação é simples. Primeiramente, cheque a memória disponível: são necessários no mínimo um total de 6.5 GB.
 
 <code> $ free -m </code>
@@ -135,11 +127,13 @@ menor do que a necessária, deve-se expandi-la. Pode ser encontrada maneira de s
 
 https://qengineering.eu/install-opencv-4.5-on-raspberry-64-os.html
 
-<code> $ wget https://github.com/Qengineering/Install-OpenCV-Raspberry-Pi-64-bits/raw/main/OpenCV-4-5-5.sh </code>
+<code> $ pip install opencv-python </code>
 
-<code> $ sudo chmod 755 ./OpenCV-4-5-5.sh </code>
+<code> $ sudo apt install opencv-data </code>
 
-<code> $ ./OpenCV-4-5-5.sh </code>
+<code> $ sudo apt install libcap-dev </code>
+
+<code> $ pip install picamera2 </code>
 
 #### Finalização e limpeza
 Após a instalação completa do OpenCV, pode ser necessária a limpeza do dphys-swap. Ela deve ser feita por meio do terminal do Raspberry Pi 4 da seguinte maneira:
