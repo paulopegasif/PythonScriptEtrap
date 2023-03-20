@@ -86,11 +86,11 @@ reinstalar todo o SO, em sua versão mais recente.
 ##### Passo a Passo
 https://diyusthad.com/2022/01/how-to-increase-swap-size-in-raspberry-pi.html
 
-Em seguida, deve ser checado o tamanho da memória swap, também conhecida como virtual ou ainda área de troca. Essa deve ser grande o suficiente para suportar o que
-for necessitado.
+Em seguida, deve ser checado o tamanho da memória swap, também conhecida como área de troca. Essa deve ser grande o suficiente para suportar o que
+for necessitado pelo desenvolvedor.
 
-#### Checagem da EEPROM (memória volátil para armazenamento de pequenas quantidades de dados)
-A última checagem necessária para a configuração do Raspberry pi 4 é da versão do software da EEPROM. Nesse caso, isso não tem relação com o OpenCV, mas com a
+#### Checagem da EEPROM (para quantidades pequenas de dados)
+A última checagem necessária para a configuração do Raspberry Pi 4 é da versão do software da EEPROM. Nesse caso, isso não tem relação com o OpenCV, mas com a
 dissipação do calor. Para esse ganho de performance e dissipação correta do calor, portanto, necessita-se verificar o estado da EEPROM, se necessita ser
 atualizada, ou não:
 
@@ -136,7 +136,7 @@ Para verificar se tudo ocorreu como o esperado, digite o seguinte comando no ter
 <code> $ free -h </code>
 
 Verifique se na linha "Swap" indica 0B, pois isso indica que o arquivo de troca foi removido com sucesso.
-Assim sendo, após ter seguido os passos supracitados corretamente, o OpenCV terá sido instalado com sucesso em seu Raspberry Pi 4.
+Assim sendo, após ter seguido corretamente os passos supracitados, o OpenCV 4.5.5 estará instalado com sucesso em seu Raspberry Pi 4.
 
 
   
