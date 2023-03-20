@@ -9,6 +9,7 @@
   - Criação de ambiente virtual Conda com o Python 3.9
   - Incremento do SWAP e memória da GPU
   - Instalação do OpenCV
+  - Download das bibliotecas da API do GoogleDrive
 
 
 -------------------------------------------
@@ -16,6 +17,7 @@
 - Python 3.9
 - OpenCV 4.5.5
 - MambaForge
+- Pydrive
 
 
 
@@ -29,7 +31,12 @@
 
 <code> $ sudo apt-get install python3-pip </code> 
 
----
+### PyDrive
+
+  Para o download das bilbiotecas da API do GoogleDrive, digite o seguinte comando no terminal:
+
+<code> $ pip install PyDrive </code>
+
 
 ### MambaForge
 
