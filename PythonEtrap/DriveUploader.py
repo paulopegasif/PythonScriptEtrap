@@ -16,7 +16,8 @@ class DriveUploader:
 
     def startPlateUpload(self, trapNum):
         img_dir = os.path.abspath("./")
-        search = re.compile('*_{}_*_cropped.jpg'.format(trapNum))
+        search_str = "p{}*cropped.jpg$".format(trapNum)
+        search = re.compile(search_str)
 
         c = 0
         for f in os.listdir(img_dir):
