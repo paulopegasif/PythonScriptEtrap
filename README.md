@@ -6,7 +6,7 @@
 (Colocar tudo o que necessita para o funcionamento do Script)
 
   - Instalação do Mambaforge
-  - Criação de ambiente virtual Conda com o Python 3.9
+  - Criação de ambiente virtual Conda com o Python 3.10
   - Incremento do SWAP e memória da GPU
   - Instalação do OpenCV
 
@@ -37,7 +37,6 @@ Primeiramente deve fazer o download do Mambaforge.
 https://github.com/conda-forge/miniforge#mambaforge
 
 Exemplo: "Linux - aarch64 (arm64)"
-(Versão
 
 Feito isso, verifique se você tem permissão para executar o arquivo instalador, com o comando:
 
@@ -149,9 +148,9 @@ Assim sendo, após ter seguido corretamente os passos supracitados, o OpenCV 4.5
 1. Pergunta ao usuário qual o ID da placa;
 2. Chama a classe para fazer a captura da imagem (P - capturar | Q - sair);
 3. Pergunta ao usuário qual o tipo de inseto (1 - Afídeo | 2 - Parasitóide);
-4. Seta o nome correto para o arquivo (Data Atual + Id da Placa + Tipo do inseto + Id da Imagem(contador) + .jpg)
-5. Chama a função para fazer o Crop 
-6. Realiza o upload dos arquivos em pastas no GoogleDrive
+4. Seta o nome correto para o arquivo (Data Atual + Id da Placa + Tipo do inseto + Id da Imagem(contador) + .jpg);
+5. Chama a função para fazer o Crop; 
+6. Realiza o upload dos arquivos em pastas no GoogleDrive.
   
   
 ---
