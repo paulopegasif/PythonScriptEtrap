@@ -26,12 +26,12 @@ class DriveUploader:
 
             if search.match(filename):  # Cropped images
                 print("Cropped")
-                gfile = self.drive.CreateFile({'parents' : [{'id' : self.folder['cropped']}], 'title' : f})
+                gfile = self.drive.CreateFile({'parents' : [{'id' : self.folders['cropped']}], 'title' : f})
                 gfile.SetContentFile(filename)
                 gfile.Upload()
 
             else:                       # Original images
                 print("Originals")
-                gfile = self.drive.CreateFile({'parents' : [{'id' : self.folder['original']}], 'title' : f})
+                gfile = self.drive.CreateFile({'parents' : [{'id' : self.folders['original']}], 'title' : f})
                 gfile.SetContentFile(filename)
                 gfile.Upload()
