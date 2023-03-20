@@ -5,17 +5,21 @@ import Camera
 import DriveUploader
 from tkinter import simpledialog
 from pydrive.auth import GoogleAuth
+import tkinter
+
 
 def main():
     # Camera object context
-    cam = Camera()
+    cam = Camera.Camera()
     cam.configure()
 
     # Google Drive Object
     gauth = GoogleAuth()
-    gdrive = DriveUploader(gauth)
+    gdrive = DriveUploader.DriveUploader(gauth)
     
     # Insect traps loop
+    
+    tkroot= tkinter.Tk()
     while True:
         trapNum = simpledialog.askinteger(
             title="Etrap - Loop de captura",

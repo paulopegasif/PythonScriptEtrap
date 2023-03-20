@@ -36,6 +36,7 @@ class Camera:
         
         # Data capture array
         c = 1
+        self.imageIdCount = 1
         while True:
             # Getting numpy image array from camera module
             img = self.picam.capture_array()
@@ -73,9 +74,10 @@ class Camera:
             str(date.today()).replace("-", ""), 
             self.trapNum,
             bug_name,
-            self.lastImageId)
+            self.imageIdCount) 
         img_string_png = img_string + ".png"
         img_conv.save(img_string_png)
+        self.imageIdCount+=1
 
         # Image cropping object
         mid_img = 608 / 2
