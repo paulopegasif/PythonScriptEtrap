@@ -11,8 +11,6 @@ from datetime import date
 class Camera:
     picam = Picamera2()
     
-    
-    
     def __init__(self, shotWidth=1640, shotHeight=1232, frames=33):
         self.shotWidth = shotWidth;
         self.shotHeight = shotHeight;
@@ -21,7 +19,11 @@ class Camera:
     
     def makeDefaultConfig(self):
         self.picam_config = self.picam.create_video_configuration(
-            main={"size": (self.shotWidth, self.shotHeight)})
+            main={
+                "format": "BGR888",
+                "size": (self.shotWidth, self.shotHeight)
+            }
+        )
         self.picam_config['controls']['FrameDurationLimits'] = (self.frames, self.frames)
         self.picam_config['controls']['NoiseReductionMode'] = 1
         
@@ -37,7 +39,6 @@ class Camera:
         # Start picamera
         self.picam.start()
             
-        
         # Data capture array
         c = 1
         self.imageIdCount = 1
@@ -56,8 +57,6 @@ class Camera:
                 c += 1
         cv2.destroyAllWindows()
         self.picam.stop() # Closing camera to open again
-        
-        
 
     def imageShot(self, img):
         ''' Take a image shot from opencv camera module (picamera numpy array)
@@ -70,6 +69,8 @@ class Camera:
         bug_name = simpledialog.askstring(
             title="Etrap - Loop de captura",
             prompt="Qual o nome do inseto? (Acesso rapido: 1=>Afideo; 2=>Parasitoide)")
+        if bug_name == None:
+            exit("-> Cancelado")
         
         if bug_name == '1':
             bug_name = "afideo"

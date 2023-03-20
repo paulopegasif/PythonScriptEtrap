@@ -7,8 +7,6 @@ from tkinter import simpledialog
 from pydrive.auth import GoogleAuth
 import tkinter
 
-
-
 def main():
     
     # Camera object context
@@ -20,12 +18,14 @@ def main():
     gdrive = DriveUploader.DriveUploader(gauth)
     
     # Insect traps loop
-    
     tkroot= tkinter.Tk()
+    tkroot.withdraw()
     while True:
         trapNum = simpledialog.askinteger(
             title="Etrap - Loop de captura",
             prompt="Escreva o ID da placa de captura")
+        if trapNum == None:
+            exit("-> Cancelado")
         cam.startPlateCapture(trapNum)
         gdrive.startPlateUpload(trapNum)
 
