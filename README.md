@@ -6,7 +6,7 @@
 (Colocar tudo o que necessita para o funcionamento do Script)
 
   - Instalação do Mambaforge
-  - Criação de ambiente virtual Conda com o Python 3.10
+  - Criação de ambiente virtual Conda com o Python 3.9
   - Incremento do SWAP e memória da GPU
   - Instalação do OpenCV
 
@@ -22,7 +22,7 @@
 ## Instalando Dependências
 (Colocar aqui todo o processo de instalação dos componentes necessários para o funcionamento do Script no Raspberry)
 
-### Python 3.9 ou superior
+### Python 3.9
   Para realizar a instalação do Python no Raspberry, deve-se digitar no terminal:
 
 <code> $ sudo apt-get install python3 </code> 
@@ -56,11 +56,11 @@ Feito isso feche e abra o terminal novamente, mas agora ele será inicializado c
 
 Para criar o ambiente virtual com a versão necessária do python para a utilização da câmera, utilizar os seguintes comandos:
 
-<code> $ conda create --name venv_script_etrap_python3.10 python=3.10</code>
+<code> $ conda create --name venv_script_etrap_python3.9 python=3.9</code>
 
-<code> $ conda activate venv_script_etrap_python3.10</code>
+<code> $ conda activate venv_script_etrap_python3.9</code>
 
-<code> $ pip install picamera</code>
+<code> conda install -n venc_script_etrap_python3.9 requirements.txt </code>
 
 
 ---
