@@ -83,7 +83,7 @@ reinstalar todo o SO, em sua versão mais recente.
 
 #### Checagem da memória swap
 
-##### Passo a Passo
+##### Passo a Passo para aumentar o tamanho do SWAP no Raspberry Pi
 https://diyusthad.com/2022/01/how-to-increase-swap-size-in-raspberry-pi.html
 
 Em seguida, deve ser checado o tamanho da memória swap, também conhecida como área de troca. Essa deve ser grande o suficiente para suportar o que
