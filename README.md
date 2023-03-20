@@ -60,7 +60,7 @@ Para criar o ambiente virtual com a versão necessária do python para a utiliza
 
 <code> $ conda activate venv_script_etrap_python3.9</code>
 
-<code> conda install -n venc_script_etrap_python3.9 requirements.txt </code>
+<code> $ conda install -n venv_script_etrap_python3.9 requirements.txt </code>
 
 
 ---
