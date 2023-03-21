@@ -73,6 +73,8 @@ Para criar o ambiente virtual com a versão necessária do python para a utiliza
 ---
 
 ### OpenCV
+
+
   
 #### Checagem da versão do Sistema Operacional
 Antes da instalação do OpenCV no Raspberry pi 4, há alguns passos a serem seguidos. Primeiramente, deve-se checar a versão do Raspberry, inserindo o seguinte
@@ -115,6 +117,15 @@ Para acessar e modificá-la, vá no canto superior esquerdo da tela, na "raspber
 vá na seção de "Performance" e modifique a memória GPU para no mínimo 128 MB. 
 
 #### Script de Instalação
+
+pip install opencv-python
+sudo apt install opencv-data
+sudo apt install libcap-dev
+pip install picamera2
+
+
+
+
 Dando fim às checagens necessárias, o script da instalação é simples. Primeiramente, cheque a memória disponível: são necessários no mínimo um total de 6.5 GB.
 
 <code> $ free -m </code>
