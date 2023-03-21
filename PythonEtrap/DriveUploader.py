@@ -2,7 +2,13 @@
 
 import re
 import os
+
+#Credentials
+from google.oauth2.credentials import Credentials
+
 from pydrive.drive import GoogleDrive # Pydrive library (pip install pydrive)
+from pydrive.auth import GoogleAuth
+
 
 class DriveUploader:
     folders = {
@@ -11,20 +17,57 @@ class DriveUploader:
     }
 
     def __init__(self, gauth):
-        self.gauth = gauth
+        
+        self.gauth = GoogleAuth()
+        self.gauth.LoadCredentialsFile("settings.yaml")
         self.drive = GoogleDrive(self.gauth)
+        #self.gauth.Authorize()
 
     def startPlateUpload(self, trapNum):
-        img_dir = os.path.abspath("./")
-
-        list_dir = os.listdir(img_dir)
-        for f in re.search("^*p{}*cropped.jpg$".format(trapNum), list_dir):
-            print("-> Sending cropped image :: {}".format(f))
-            gfile = self.drive.CreateFile({'parents' : [{'id' : self.folders['cropped']}], 'title' : f})
-            gfile.SetContentFile(f)
-            gfile.Upload()
-        for f in re.search("^*p{}*.png$".format(trapNum), list_dir):
-            print("-> Sending original image :: {}".format(f))
-            gfile = self.drive.CreateFile({'parents' : [{'id' : self.folders['original']}], 'title' : f})
-            gfile.SetContentFile(f)
-            gfile.Upload()
+        img_dir = os.path.abspath("../img")
+        
+        cropName = re.compile('.*cropped.*')
+        originalName = re.compile('.*\.png.*')
+        print()
+        print(" [***] UPLOADING TO DRIVE [***]")
+        print()
+        c = 0
+        for f in os.listdir(img_dir):
+            c += 1
+            filename = os.path.join(img_dir, f)
+            #print("Arquivo: " + str(filename))
+        
+            try:
+                
+                #print("Entrou no try")
+                #re.search("^p{}*cropped\.jpg$".format(trapNum), filename)
+                if cropName.match(filename):  # Cropped images
+                    print("----> Sending cropped image :: {}".format(filename))
+                    gfile = self.drive.CreateFile({'parents' : [{'id' : self.folders['cropped']}], 'title' : f})
+                    gfile.SetContentFile(filename)
+                    gfile.Upload()
+                    os.remove(filename) # Remove file
+                    print("---[*] Uploaded Cropped image:: {}".format(filename))
+                    print()
+                    
+                elif originalName.match(filename):
+                    print("----> Sending original image :: {}".format(filename))
+                    gfile = self.drive.CreateFile({'parents' : [{'id' : self.folders['original']}], 'title' : f})
+                    gfile.SetContentFile(filename)
+                    gfile.Upload()
+                    os.remove(filename) # Remove file
+                    print("---[*] Uploaded Original image:: {}".format(filename))
+                    print()
+            
+            except re.error as e:
+                print("Regex Error return {}".format(e))
+        
+            
+            
+        print(" [***] UPLOAD COMPLETED [***]")
+        print()
+        print()
+        
+        
+        
+        

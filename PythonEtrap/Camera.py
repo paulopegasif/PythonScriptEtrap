@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import os
 import cv2
 from tkinter import simpledialog
 from picamera2 import Picamera2
@@ -10,7 +11,9 @@ from datetime import date
 class Camera:
     picam = Picamera2()
     
-    def __init__(self, shotWidth=2048, shotHeight=1080, frames=33):
+    
+    
+    def __init__(self, shotWidth=1640, shotHeight=1232, frames=33):
         self.shotWidth = shotWidth;
         self.shotHeight = shotHeight;
         self.frames = frames * 1010;        # Converting frames to hz
@@ -30,9 +33,10 @@ class Camera:
     def startPlateCapture(self, trapNum):
         ''' PiCamera2 frame capture loop with Opencv2 image interface '''
         self.trapNum = trapNum
-
+        
         # Start picamera
         self.picam.start()
+            
         
         # Data capture array
         c = 1
@@ -51,6 +55,9 @@ class Camera:
                 self.imageShot(img)
                 c += 1
         cv2.destroyAllWindows()
+        self.picam.stop() # Closing camera to open again
+        
+        
 
     def imageShot(self, img):
         ''' Take a image shot from opencv camera module (picamera numpy array)
@@ -76,12 +83,15 @@ class Camera:
             bug_name,
             self.imageIdCount) 
         img_string_png = img_string + ".png"
-        img_conv.save(img_string_png)
+        
+        #Change Directory
+        directory = os.path.abspath("../img")
+        img_conv.save(os.path.join(directory, img_string_png))
         self.imageIdCount+=1
 
         # Image cropping object
         mid_img = 608 / 2
-        img_crop = cv2.imread(img_string_png)
+        img_crop = cv2.imread(os.path.join(directory, img_string_png))
         print("[*] Cropping image '" + img_string_png + "'...\n", img_crop.shape)
 
         # Image dimensions
@@ -90,4 +100,8 @@ class Camera:
 
         # Cropping data shape
         img_cropped = img_crop[(int)(height/2 - mid_img):(int) (height/2 + mid_img), (int)(width/2 - mid_img): (int) (width/2 + 304)]
-        cv2.imwrite(img_string + "_cropped.jpg", img_cropped)
+        img_cropped_name = img_string + "_cropped.jpg"
+        
+        cv2.imwrite(os.path.join(directory, img_cropped_name), img_cropped)
+        print("[*] Image Successfully Cropped!")
+        

@@ -8,7 +8,9 @@ from pydrive.auth import GoogleAuth
 import tkinter
 
 
+
 def main():
+    
     # Camera object context
     cam = Camera.Camera()
     cam.configure()
