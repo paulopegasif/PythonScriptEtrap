@@ -127,13 +127,13 @@ menor do que a necessária, deve-se expandi-la. Pode ser encontrada maneira de s
 
 https://qengineering.eu/install-opencv-4.5-on-raspberry-64-os.html
 
-<code> pip install opencv-python </code>
+<code> $ pip install opencv-python </code>
 
-<code> sudo apt install opencv-data </code>
+<code> $ sudo apt install opencv-data </code>
 
-<code> sudo apt install libcap-dev </code>
+<code> $ sudo apt install libcap-dev </code>
 
-<code> pip install picamera2 </code>
+<code> $ pip install picamera2 </code>
 
 #### Finalização e limpeza
 Após a instalação completa do OpenCV, pode ser necessária a limpeza do dphys-swap. Ela deve ser feita por meio do terminal do Raspberry Pi 4 da seguinte maneira:
