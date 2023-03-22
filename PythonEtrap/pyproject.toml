@@ -12,6 +12,13 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+dependencies = [
+    "pydrive",
+    "opencv",
+    "picamera2",
+    "libcamera",
+    "PIL"
+]
 
 [project.urls]
 "Homepage" = "https://github.com/paulopegasif/PythonScriptEtrap"
