@@ -11,8 +11,13 @@ from pydrive.auth import GoogleAuth
 
 class DriveUploader:
     folders = {
-        'cropped': '1V_2FZw5X9T828xQedEOvb5l9lsr6Zoac',
-        'original': '1Lzn6tLnREkbgqlCT3tHNDqCrPoUyYZqN'
+    # dataset 5MP
+        'cropped': '1dcpawBB2w5mPP1AZMXoGDyNpEO7hzc2U',
+        'original': '1ddAydzhwpoIwpqt78H4HSAj03_7lvy01'
+    
+    # dataset 8MP
+        #'cropped': '1V_2FZw5X9T828xQedEOvb5l9lsr6Zoac',
+        #'original': '1Lzn6tLnREkbgqlCT3tHNDqCrPoUyYZqN'
     }
 
     def __init__(self, gauth):
