@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import re
 import os
 import cv2
 from tkinter import simpledialog
@@ -68,7 +69,7 @@ class Camera:
         # Getting user insect name (GUI)
         bug_name = simpledialog.askstring(
             title="Etrap - Loop de captura",
-            prompt="Qual o nome do inseto? (Acesso rapido: 1=>Afideo; 2=>Parasitoide)")
+            prompt="Qual o nome do inseto? (Acesso rapido: 1=>Afideo; 2=>Parasitoide; 3=> Apagar foto)")
         if bug_name == None:
             exit("-> Cancelado")
         
@@ -76,6 +77,12 @@ class Camera:
             bug_name = "afideo"
         elif bug_name == '2':
             bug_name = "parasitoide"
+        elif bug_name == '3':
+            bug_name = "apagar"
+        elif bug_name == '4':
+             bug_name = "detrito"
+            
+
         
         # Saving image file (original)
         img_string = "{}_p{}_{}_{}".format(
@@ -84,11 +91,13 @@ class Camera:
             bug_name,
             self.imageIdCount) 
         img_string_png = img_string + ".png"
+
         
         #Change Directory
         directory = os.path.abspath("../img")
         img_conv.save(os.path.join(directory, img_string_png))
         self.imageIdCount+=1
+
 
         # Image cropping object
         mid_img = 608 / 2
@@ -105,4 +114,20 @@ class Camera:
         
         cv2.imwrite(os.path.join(directory, img_cropped_name), img_cropped)
         print("[*] Image Successfully Cropped!")
+        
+        
+        # Erase Name Images Incorrect
+        apagarName = re.compile('.*apagar.*')
+        
+        if(apagarName.match(img_string_png)):
+                os.remove(os.path.join(directory, img_string_png))
+                os.remove(os.path.join(directory, img_cropped_name))
+                print("--- Images Delected ---")
+                self.imageIdCount-=1
+                
+        
+        
+                        
+        
+                        
         

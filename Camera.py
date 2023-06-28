@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import re
 import os
 import cv2
 from tkinter import simpledialog
@@ -90,11 +89,18 @@ class Camera:
             self.imageIdCount) 
         img_string_png = img_string + ".png"
 
+        # Erase Images Incorrect
+        apagarName = re.compile('.*apagar.*')
+
+        if (apagarName.match(img_string_png)):
+            os.remove(img_string_png)
+            self.imageIdCount-=1
         
         #Change Directory
         directory = os.path.abspath("../img")
         img_conv.save(os.path.join(directory, img_string_png))
         self.imageIdCount+=1
+
 
 
         # Image cropping object
@@ -112,20 +118,4 @@ class Camera:
         
         cv2.imwrite(os.path.join(directory, img_cropped_name), img_cropped)
         print("[*] Image Successfully Cropped!")
-        
-        
-        # Erase Name Images Incorrect
-        apagarName = re.compile('.*apagar.*')
-        
-        if(apagarName.match(img_string_png)):
-                os.remove(os.path.join(directory, img_string_png))
-                os.remove(os.path.join(directory, img_cropped_name))
-                print("--- Images Delected ---")
-                self.imageIdCount-=1
-                
-        
-        
-                        
-        
-                        
         
