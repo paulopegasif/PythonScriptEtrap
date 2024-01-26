@@ -1,12 +1,12 @@
 {
-  "type": "service_account",
-  "project_id": "sync-drive-with-raspberry",
-  "private_key_id": "01f3bc778e851c9a688ef43424ad9a469d164e27",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCReHhyr8YsNAAH\njIewlpnAX1megxZwTThrDle5GPwMZJNl9oZOYfGubvoldwliSoKXnBOr00u6E0fk\nr1BAz4ZWf9/e+vi2tLS2TZ6Nr8PTK1VD1z08eQTZFYDi1nf537e6gzloRrqN7mYS\noeaS+YxyY1tHpCYWM8g/0nTxPSw/Ri8wE0f1poZhPjw1A8amWUZP3lnu9MIFqZKh\nWTCZDWMoCeUC7pBKhWDafUSpHnxMQyk0Ser+kVnuP7p7zI/ViVYel3tsZPyewMam\nVvgBPXGhLOHtDyAu/jifsmHFWa/j12wiYy5W9oSbaT2Kxn75E+bnqOPX/kgEFSS0\n4ld0Uqs/AgMBAAECggEAK3Bf909JzBVTFO3/7tlp3Coc5tqaLrrAaCeGRn2Rdlnq\nMf5lqK5SrxXwmJNtN+6sBH3U2fBkopHzW/SF8HSH1vikbz9eWaCofe+7su+TeFFu\nSq3RWWeB7RkgvZvxg6osgQOCdwL33j4cOOAjrCvcpqPItCHuRZ784yIDTa5IsjPd\nzug/Etuu5TBFoWsZU/qkkqdJbnMGxwoLkNjKLHhkY7qGJtqq5JkY0Bgan8ikQwOs\nwe/TcKdfk0l3rZIx1ugp5HMtIANxGdUI3GdGYp8LK1yEQ+dsB0EfQU5zKDmX5W4f\nFf3C1XyjhP+qcJ6vfNm6TPK8lb3WNePn5/I017opEQKBgQDA/OH0PTIPgCI/E3tx\nzlHJp/RCI1NNiGJhyCzzC5kBaiUrpcyXKS6yNufrEdwDI77y8XEl2f+wltcAfb8s\nQQBcQPaJITq9yM0P0j1FJL+itdvDYIQjU36CujlKEydfkLWS1Q2NOmC81YHhfAOF\n5FcgvtPTIcK2zSKCo5OhTycEhQKBgQDA982YiiMuRFrEn8HM98p4AhkvMCrKxbzI\nhtxnwyioAzz/dhS8/gT1UIFnnYxbBgj9VixXW9b2gxzr0X/OJtyiG9RBtRbsRsNN\n8096e4O5RwvzWWY69VUVzW783uX/BkQ+6m3fBZ8ODN35f/O2WLfDEECMAmmPwMvj\nm0l3++Yt8wKBgGzLo04fWaNnZucMQqFL4MvARXErnQCujFf3k2+I8D7d6gqLM6Vb\n8BlD3sakkNWsRy+KcXEXTo/s2VRLj4SROHTJorJ36zemhgQPT781ElvWDgg81wFb\nRozIExfxaFb1q4cVWMhvSq3p54iIcyv+KCgrrBrwg2auim//a3CawLJJAoGAP0UA\ntDMWteTTngSDlqDoUdDeUQqJ/VI4Q8d0HNFwUyY8qcYdppnjJkvvIfoWOwIPkIDg\nqQQDx2/V27wlG4LCdKSLQ8AMdAv/nV9Zf99foTAaSv/U9R/bdfqVmXO8FZIIbliP\nDcDaFdFCNrwtPGx6VArQHxfrZKbiMw6HWD/PiOECgYEAgh7YIJMgZEkJTKgbEBt/\nTCv5+v/HxnOmGEOIUQ8cxuA0dRRoikS2oLK4VzwL80w/itigMgbUDzgfjghONwuR\nnEdYQ7TVuLaJB9ckjPDJE/OJzW8gOkAa93p27CBzsfvptsMsyt0mc909cnw4B5JC\nWgAdcc6ml+O3Ql2Nx4DB2n0=\n-----END PRIVATE KEY-----\n",
-  "client_email": "sync-drive-ifsul@sync-drive-with-raspberry.iam.gserviceaccount.com",
-  "client_id": "107847169711570834571",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sync-drive-ifsul%40sync-drive-with-raspberry.iam.gserviceaccount.com"
+  "type": "",
+  "project_id": "",
+  "private_key_id": "",
+  "private_key": "\n-----END PRIVATE KEY-----\n",
+  "client_email": "",
+  "client_id": "",
+  "auth_uri": "",
+  "token_uri": "",
+  "auth_provider_x509_cert_url": "",
+  "client_x509_cert_url": ""
 }
